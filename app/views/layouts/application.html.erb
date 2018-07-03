@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fuzen</title>
+    <%= csrf_meta_tags %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag    params[:controller] %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body class="panel-data expand-data">
+    <%= render 'shared/topbar' %>
+    <%= render 'shared/sidebar' %>
+    <%= render 'shared/option_panel' %>
+    <%= yield %>
+    <%= render 'shared/footer' %>
+    <%= yield 'javascript_contents' %>
+  </body>
+</html>
